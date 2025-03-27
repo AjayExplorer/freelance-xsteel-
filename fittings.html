@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fittings - XSTEEL</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" class="logo-link">
+                    <i data-lucide="wrench" class="logo-icon"></i>
+                    <span>XSTEEL</span>
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html#home">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#materials">Materials</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu" class="menu-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="material-detail">
+        <div class="material-header">
+            <div class="container">
+                <a href="../index.html#materials" class="back-button">
+                    <i data-lucide="arrow-left" class="back-icon"></i>
+                    Back to Materials
+                </a>
+                <h1>Fittings</h1>
+                <p>Premium pipe fittings for industrial applications</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="material-items">
+                <div class="material-item">
+                    <h3>Elbows</h3>
+                    <p>Various angle elbows for pipe connections</p>
+                    <h4>Available Types:</h4>
+                    <ul>
+                        <li>45° Elbows</li>
+                        <li>90° Elbows</li>
+                        <li>Long Radius Elbows</li>
+                    </ul>
+                    <p>High-quality elbows available in different materials and sizes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="info-item">
+                        <i data-lucide="phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="mail"></i>
+                        <span>info@xsteel.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>123 Industrial Ave, Steel City</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#materials">Materials</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <ul>
+                        <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 10:00 AM - 4:00 PM</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> XSTEEL. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
