@@ -454,3 +454,8 @@ body {
 .card-button:hover {
   background: #0056b3;
 }
+.cardpic{
+  width: 500px;
+  height: 200px;
+  object-fit: cover;
+}
